@@ -1,5 +1,6 @@
-import React from 'react';
+// connects to the buildcontrol component 
 
+import React from 'react';
 import classes from './BuildControls.css';
 import BuildControl from './BuildControl/BuildControl';
 

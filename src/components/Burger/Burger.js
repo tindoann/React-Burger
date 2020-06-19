@@ -9,11 +9,14 @@ const burger = ( props ) => {
         .map( igKey => {
             return [...Array( props.ingredients[igKey] )].map( ( _, i ) => {
                 return <BurgerIngredient key={igKey + i} type={igKey} />;
-            } );
-        } )
+                // key = salad1 type = salad1
+            });
+        })
+        // flatten the array to get mutliple arrays in an object
         .reduce((arr, el) => {
             return arr.concat(el)
         }, []);
+// no input, ask user to enter input 
     if (transformedIngredients.length === 0) {
         transformedIngredients = <p>Please start adding ingredients!</p>;
     }
